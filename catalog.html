@@ -1,4 +1,5 @@
-<html lang="ru">
+<!doctype html>
+  <html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
@@ -22,46 +23,119 @@
         <div class="user-block">
             <a class="search" href="#"><img src="http://loup.png/20x20>"</a>
             <a class="login" href="#">Вход</a>
-            <a class="login" href="#">2 товара</a>
-            <b class="open-hours">С 10 до 20, ежедневно</b>
+            <a class="login" href="#">2 товара</a></br>
+            <b class="open-hours">С 10 до 20, ежедневно</b></br>
             <b class="phone-number">8 812 450-25-25</b>
         </div>
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <ul>
             <li><a href="#">Главная</a></li>
             <li><a href="#">Каталог</a></li>
             <li><a href="#">Сливочное</a></li>
           </ul>
-        </nav>
+        </div>
         <h1>Сливочное мороженое</h1>
-        <div class="filters">
-          <form class="quicksort" action="#" method="post">
+        <form class="filters" action="#" method="post">
+          <div class="quicksort">
             <p>Сортировка:</p>
             <select name="type">
               <option value="popular">по популярности</option>
               <option value="price">по цене</option>
               <option value="somewhat">по другому признаку</option>
             </select>
-          </form>
-          <form class="price-range" action="#" method="post">
+          </div>
+          <div class="price-range">
             <p>Цена: 100 руб. - 500 руб.</p>
-            <! ползунок >
-          </form>
-          <form class="fat-level" action="#" method="post">
+            <input type="range" min="0" max="700" step="1">
+          </div>
+          <div class="fat-level">
             <p>Жирность:</p>
             <label>
-              <input type="radio" name="zero" value="0%">
+              <input type="radio" name="fat-level" value="0%">
+              0%
             </label>
             <label>
-              <input type="radio" name="ten-percent" value="10%">
+              <input type="radio" name="fat-level" value="10%" checked>
+              до 10%
             </label>
             <label>
-              <input type="radio" name="thirty-percent" value="30%">
+              <input type="radio" name="fat-level" value="30%">
+              до 30%
             </label>
             <label>
-              <input type="radio" name="more" value="выше 30%">
+              <input type="radio" name="fat-level" value="выше 30%">
+              выше 30%
             </label>
-          </form>
-
-      </div>
+          </div>
+          <div class="filler">
+            <p>Наполнители</p>
+            <label>
+              <input type="radio" name="choko" value="choko" checked>
+              шоколадные
+            </label>
+            <label>
+              <input type="radio" name="sugar" value="sugar" checked>
+              сахарные присыпки
+            </label>
+            <label>
+              <input type="radio" name="fruits" value="fruits">
+              фрукты
+            </label>
+            <label>
+              <input type="radio" name="syrup" value="syrup">
+              сироп
+            </label>
+            <label>
+              <input type="radio" name="jam" value="jam">
+              джемы
+            </label>
+          </div>
+          <div class="filters-button">
+            <input type="submit" value="Применить">
+      </form>
     </header>
+    <main class="catalogue">
+      <div class="item">
+        <img src="http://photo.jpg/70x70">
+        Сливочное с апельсиновым джемом и цитрусовой стружкой
+      </div>
+      <div class="item">
+        <img src="http://photo.jpg/70x70">
+        Сливочно-кофейное с кусочками шоколада
+      </div>
+      <div class="item">
+        <img src="http://photo.jpg/70x70">
+        Сливочно-клубничное с присыпкой из белого шоколада
+      </div>
+      <div class="item">
+        <img src="http://photo.jpg/70x70">
+        Сливочно-клубничное с присыпкой из белого шоколада
+      </div>
+      <div class="pages">
+        <span><</span>
+        <span>1</span>
+        <a href="#" class="page">2</a>
+        <a href="#" class="page">3</a>
+        <a href="#" class="page">4</a>
+        <a href="#" class="page">></a>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="footer-social">
+        <a class="social-btn social-btn-tw" href="#"><img src="http://twitter-logo.png/30x30"</a>
+        <a class="social-btn social-btn-inst" href="#"><img src="http://instagram-logo.png/30x30"</a>
+        <a class="social-btn social-btn-fb" href="#"><img src="http://facebook-logo.png/30x30"</a>
+        <a class="social-btn social-btn-vk" href="#"><img src="http://vkontakte-logo.png/30x30"</a>
+      </div>
+      <div class="usefull-links">
+        <a href="#"><b>Для поставщиков</b></a>
+        <a href="#">О производстве</a>
+        <a href="#">Наши документы</a>
+        <a href="#">Экологические стандарты</a>
+      </div>
+      <div class="footer-copyright">
+        <img src="http://htmlacademy-logo.png/60x20">
+          Сделано в <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+      </div>
+  </body>
+</html>
