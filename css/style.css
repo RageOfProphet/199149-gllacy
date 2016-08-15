@@ -1,0 +1,23 @@
+body {
+  font-size: 16px;
+  line-height: 22px;
+  color: black;
+  font-weight: normal;
+  font-style: "Roboto";
+}
+
+h1 {
+  font-size: 35px;
+  line-height: 41px;
+  color: black;
+  font-weight: normal;
+  font-style: "Roboto";
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 30px;
+  color: black;
+  font-weight: normal;
+  font-style: "Roboto";
+}
