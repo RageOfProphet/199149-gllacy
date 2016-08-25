@@ -1,23 +1,157 @@
+html,
 body {
-  font-size: 16px;
-  line-height: 22px;
-  color: black;
-  font-weight: normal;
-  font-style: "Roboto";
+  background-color: gray;
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  font-size: 35px;
-  line-height: 41px;
-  color: black;
-  font-weight: normal;
-  font-style: "Roboto";
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-h2 {
-  font-size: 24px;
-  line-height: 30px;
-  color: black;
-  font-weight: normal;
-  font-style: "Roboto";
+.container {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-header {
+  height: 120px;
+  background-color: green;
+}
+
+.page-logo {
+  width: 154px;
+  height: 64px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  float: left;
+}
+
+.main-navigation {
+  float: left;
+  width: 700px;
+  min-height: 70px;
+}
+
+.main-navigation li, .breadcrumbs li {
+  display: inline;
+}
+
+.user-block {
+  float: right;
+  width: 267px;
+  min-height: 70px;
+}
+
+.slider {
+  width: 1146px;
+  height: 520px;
+  background-color: orange;
+}
+
+.raspberries-promo {
+  float: left;
+  width: 560px;
+  height: 229px;
+  margin-right: 26px;
+  background-image: url("../img/raspberry-background.jpg");
+  color: white;
+}
+
+.choco-promo {
+  float: right;
+  width: 560px;
+  height: 229px;
+  background-image: url("../img/choco-background.jpg");
+  color: white;
+}
+
+.product-item {
+  display: inline-block;
+  width: 270px;
+  height: 390px;
+  margin-right: 18px;
+}
+.product-item:last-child {
+  margin-right: 0px;
+}
+
+.about-glacy {
+  width: 1146px;
+  height: 305px;
+  background-image: url("../img/pattern.jpg");
+  margin-bottom: 40px;
+}
+
+.about-glacy .column1 {
+  float: left;
+  width: 560px;
+}
+
+.about-glacy .column2 {
+  float: right;
+  width: 560px;
+}
+
+.content {
+  margin-bottom: 40px;
+}
+
+.blog {
+  float: left;
+  width: 560px;
+  height: 220px;
+  background-image: url("../img/News-back.jpg");
+  margin-right: 26px;
+}
+
+.mailing {
+  float: right;
+  width: 560px;
+  height: 220px;
+  background-image: url("../img/email-back.jpg");
+}
+
+.map {
+  width: 1200px;
+  height: 430px;
+  background-image: url("../img/map.jpg");
+  margin-left: -27px;
+}
+
+.adress-info {
+  width: 300px;
+  height: 305px;
+  float: right;
+  background-color: white;
+}
+
+.main-footer {
+  width: 1146px;
+  margin: auto;
+}
+
+.footer-social {
+  display: inline-block;
+  width: 260px;
+  margin-top: 35px;
+  margin-bottom: 26px;
+  margin-right: 26px;
+}
+
+.social-btn {
+  padding-right: 10px;
+}
+
+.usefull-links {
+  display: inline-block;
+}
+
+.footer-copyright {
+  display: inline-block;
 }
