@@ -16,10 +16,6 @@ body {
   width: 1146px;
   margin: 0 auto;
   padding: 0 10px;
-}
-
-.main-header {
-  height: 120px;
   background-color: green;
 }
 
@@ -54,6 +50,38 @@ body {
   background-color: orange;
 }
 
+.filters-block {
+  width: 1000px;
+  margin-bottom: 40px;
+}
+
+.filter {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.quicksort {
+  width: 200px;
+}
+
+.price-range {
+  width: 230px;
+}
+
+.fat-level {
+  width: 410px;
+  margin-bottom: 20px;
+}
+
+.filler {
+  width: 710px;
+  margin-top: 0px;
+}
+
+.button .filter {
+  width: 70px;
+}
+
 .raspberries-promo {
   float: left;
   width: 560px;
@@ -75,10 +103,17 @@ body {
   display: inline-block;
   width: 270px;
   height: 390px;
-  margin-right: 18px;
+  margin-right: 17px;
+  vertical-align: top;
 }
-.product-item:last-child {
+.product-item:nth-child(4n) {
   margin-right: 0px;
+}
+
+.pages {
+  float: right;
+  width: 200px;
+  margin-bottom: 15px;
 }
 
 .about-glacy {
@@ -88,13 +123,8 @@ body {
   margin-bottom: 40px;
 }
 
-.about-glacy .column1 {
-  float: left;
-  width: 560px;
-}
-
-.about-glacy .column2 {
-  float: right;
+.features {
+  display: inline-block;
   width: 560px;
 }
 
@@ -134,14 +164,14 @@ body {
 .main-footer {
   width: 1146px;
   margin: auto;
+  margin-top: 35px;
 }
 
 .footer-social {
-  display: inline-block;
+  float: left;
   width: 260px;
-  margin-top: 35px;
   margin-bottom: 26px;
-  margin-right: 26px;
+  margin-right: 100px;
 }
 
 .social-btn {
@@ -149,9 +179,21 @@ body {
 }
 
 .usefull-links {
+    float: left;
+    width: 470px;
+    margin-top: -30px;
+    vertical-align: top;
+}
+
+.link {
   display: inline-block;
+  width: 200px;
+  margin: 5px;
+  vertical-align: top;
 }
 
 .footer-copyright {
-  display: inline-block;
+  float: right;
+  width: 205px;
+  margin-top: -20px;
 }
