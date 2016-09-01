@@ -11,6 +11,13 @@ body {
   line-height: 18px;
 }
 
+h1 {
+  color: #ffffff;
+  font-size: 35px;
+  line-height: 41px;
+
+}
+
 p {
   font-size: 16px;
   line-height: 22px;
@@ -68,24 +75,66 @@ p {
   line-height: 18px;
   vertical-align: top;
   display: inline-block;
-
 }
 
-.main-navigation a {
+.main-navigation a, .main-navigation span {
   display: block;
   padding: 29px 15px;
   color: #ffffff;
 }
 
+ .breadcrumbs {
+   outline: 1px solid yellow;
+   clear: both;
+ }
+.breadcrumbs ul {
+  margin: 0 0;
+  padding: 0 0;
+  list-style: none;
+  font-size: 0;
+}
 
  .breadcrumbs li {
   display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.breadcrumbs a, .breadcrumbs span {
+    display: block;
+    padding-right:20px;
+    color: #ffffff;
 }
 
 .user-block {
   float: right;
   width: 290px;
   min-height: 70px;
+  outline: 1px solid blue;
+}
+
+.button {
+    display: inline-block;
+}
+
+.btn-head {
+  display: inline-block;
+  margin-right: 0px;
+  padding: 0px 0px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  font-family: "Roboto", "Arial", sans-serif;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 16px;
+  outline: none;
+  cursor: pointer;
 }
 
 .slider {
@@ -180,22 +229,34 @@ p {
 .product-item {
   display: inline-block;
   width: 270px;
-  height: 390px;
-  margin-right: 15px;
+  margin-right: 16px;
   vertical-align: top;
+  position: relative;
+  text-align: center;
 }
+
 .product-item:nth-child(4n) {
   margin-right: 0px;
 }
 
-.product-item p {
+.product-item a {
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;
   text-decoration: underline;
   color: #ffffff;
-  text-align: center;
   margin: 0 0;
+}
+
+.product-hit::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 61px;
+  height: 61px;
+  background: transparent url("../img/Hit-icon.png") no-repeat;
 }
 
 .price {
@@ -203,6 +264,9 @@ p {
   line-height: 44px;
   color: white;
   font-weight: bold;
+  position: absolute;
+  top: 210px;
+  left: 0px;
 }
 
 .pages {

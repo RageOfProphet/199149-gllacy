@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet"> 
+    <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
     <header class="main-header">
-      <div class="container clearfix">
+      <div class="header-container clearfix">
         <div class="page-logo">
           <img src="img/logo.svg" width="154" height="64" alt="Glacys">
         </div>
@@ -21,24 +21,35 @@
               <a href="#">Доставка и оплата</a>
             </li>
             <li>
-              <a href="#">О компании</a>
+              <a href="#">О Компании</a>
             </li>
           </ul>
         </nav>
         <div class="user-block">
-          <a class="search" href="#">  <img src="img/loupe.svg" width="17" height="17" alt="Loupe"></a>
-          <a class="login" href="#"> <img src="img/enter-pic.svg" width="21" height="19" alt="Enter">Вход</a>
-          <a class="login" href="#"><img src="img/cart-pic.svg" width="21" height="20" alt="Cart">Пусто</a></br>
-          <b class="open-hours">С 10 до 20, ежедневно</b></br>
-          <b class="phone-number">8 812 450-25-25</b></br>
-        </div>
-        <div class="breadcrumbs">
-          <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Сливочное</a></li>
-          </ul>
-        </div>
+          <div class="user-buttons">
+            <div class="button">
+              <a class="search btn-head" href="#">  <img src="img/loupe.svg" width="17" height="17" alt="Loupe"></a>
+            </div>
+            <div class="button">
+              <a class="login btn-head" href="#"> <img src="img/enter-pic.svg" width="21" height="19" alt="Enter">Вход</a>
+            </div>
+            <div class="button">
+              <a class="cart btn-head" href="#"><img src="img/cart-pic.svg" width="21" height="20" alt="Cart">Пусто</a></br>
+            </div>
+          </div>
+            <div class="open-time">
+              <b class="open-hours">С 10 до 20, ежедневно</b></br>
+              <b class="phone-number">8 812 450-25-25</b></br>
+            </div>
+          </div>
+          <div class="breadcrumbs">
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Каталог</a></li>
+              <li><span>Сливочное</span></li>
+            </ul>
+          </div>
+      <div class="filters">
         <h1>Сливочное мороженое</h1>
         <form class="filters-block" action="#" method="post">
           <div class="quicksort filter">
@@ -100,8 +111,9 @@
           </div>
         </form>
       </div>
+    </div>
     </header>
-      <div class="container clearfix">
+    <div class="container clearfix">
         <main class="catalogue">
           <div class="product-item">
             <img src="img/IceCream-1.jpg" width="268" height="268" alt="IceCream">
@@ -173,7 +185,6 @@
         </div>
         </main>
       </div>
-
     <footer class="main-footer">
       <div class="footer-social">
         <a class="social-btn social-btn-tw" href="#"><img src="img/tw-social.svg" width="32" height="32" alt="twitter"></a>
