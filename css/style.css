@@ -22,6 +22,7 @@ p {
   font-size: 16px;
   line-height: 22px;
   color: #323232;
+  font-weight: 400;
   margin: 0 0;
 }
 
@@ -41,8 +42,6 @@ img {
   padding: 10px 20px;
   background-color: #e94f38;
   position: absolute;
-  bottom: 23px;
-  right: 17px;
   cursor: pointer;
   text-decoration: none;
   font-size: 18px;
@@ -53,10 +52,12 @@ img {
   border-radius: 25px;
   font-weight: bold;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64)
 }
 
 .btn:hover {
   background-color: #f17c64;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 .hide {
   display: none;
@@ -87,14 +88,12 @@ img {
   max-width: 1180px;
   margin: 0 auto;
   padding-left: 20px;
-  outline: 1px solid blue;
 }
 
 .container {
   width: 1146px;
   margin: 0 auto;
   padding: 0 27px;
-  outline: 1px solid green;
 }
 
 /* -------------------------------*/
@@ -107,13 +106,11 @@ img {
   padding-right: 15px;
   padding-bottom: 0px;
   float: left;
-  outline: 1px solid green;
 }
 
 .main-navigation {
   float: left;
   width: 700px;
-  outline: 1px solid green;
 }
 
 .main-menu {
@@ -140,7 +137,7 @@ img {
   color: #ffffff;
 }
 
-.main-menu-item a::after {
+.main-menu-item > a::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -150,7 +147,7 @@ img {
     background-color: rgba(255,255,255,0.4);
 }
 
-.main-menu-item:hover a {
+.main-menu-item:hover > a {
   background-color: #ffffff;
   color: #323232;
   border-radius: 25px;
@@ -165,9 +162,10 @@ img {
   position: absolute;
   top: 60px;
   left: -5px;
-  padding-bottom: 5px;
-  z-index: 10px;
+  z-index: 10;
   display: none;
+  box-shadow: 0 20px 20px 0 rgba(0,0,0,0.4);
+  overflow: hidden;
 }
 
 .submenu-item {
@@ -177,6 +175,7 @@ img {
   width: 145px;
   vertical-align: top;
 }
+
 
 .submenu-item > a {
   text-decoration: none;
@@ -188,33 +187,50 @@ img {
   padding: 10px 20px;
   color: #323232;
 }
+
+.submenu-item:hover > a {
+  background-color: #fbded7;
+}
 .main-menu-item:first-child:hover .submenu {
   display: block;
 }
 
-/*.submenu a:first-child {
-  font-weight: bold; /*не работает*/
+
+.submenu .new-arrivals {
+  font-weight: 700;
+  position: relative;
+  display: block;
 }
+
+.submenu .new-arrivals::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 10px;
+    right: 10px;
+    bottom: 0px;
+    background-color: #d1d0ce;
+}
+
 
 /* --------------------------------*/
 /* -----МЕНЮ ПОЛЬЗОВАТЕЛЯ СПРАВА----*/
 .user-block {
   float: right;
   min-width: 260px;
-  outline: 1px solid blue;
   padding-top: 23px;
   margin-right: 27px;
 }
 
 .user-buttons {
   text-align: right;
-  outline: 1px solid white;
+  margin: 15px 0;
 }
 .button-container {
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
-  margin-top: 31px;
+
 }
 
 .btn-head {
@@ -226,6 +242,7 @@ img {
   line-height: 16px;
   color: #ffffff;
   font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
   text-align: center;
   position: relative;
   background-color: rgba(255,255,255,0.2);
@@ -446,7 +463,6 @@ img {
 /* ------------Слайдер-----------*/
 
 .slider-block {
-  outline: 1px solid red;
   position: relative;
 }
 .slider {
@@ -470,17 +486,19 @@ img {
 	font-size: 60px;
 }
 
-.slide > a {
+.slider-button {
+  padding: 14px 40px;
   font-size: 32px;
   line-height: 44px;
-  padding: 12px 40px;
+  padding: 16px 40px;
   border-radius: 50px;
-  right: auto;
-  position: relative;
-  width: 280px;
-  box-sizing: border-box;
-  margin: auto;
   margin-top: 60px;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+
 }
 
 .slider-controls {
@@ -559,8 +577,8 @@ img {
     padding-right:20px;
     color: #ffffff;
 }
-/* --------------------------------*/
-/* ----------Блок с акциями--------*/
+/* -----------------------------------------*/
+/* ----------Блок с акциями-----------------*/
 .promos {
   margin-bottom: 35px;
 }
@@ -613,10 +631,13 @@ img {
 .choco-promo p, .raspberries-promo p {
     color: #ffffff;
 }
+.promo-button {
+  bottom: 23px;
+  right: 17px;
+}
 /* --------------------------------*/
 /* ----Блок с хитами мороженок----*/
 .bestsellers {
-  outline: 1px solid red;
   margin-bottom: 40px;
 }
 
@@ -687,23 +708,22 @@ img {
 }
 .glance-look {
   content: "";
-  position: absolute;
   right: 15px;
   left: 15px;
+  bottom: -35px;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  bottom: -35px;
   padding: 12px 12px;
   display: none;
 }
 
-.product-item > a:hover{
-  color: #e84d37;
+.product-item:hover a{
   border-bottom: none;
 }
 .product-item:hover .product-img-crop::before, .product-item:hover .glance-look{
-  display: block;
+  display: inline-block;
+
 }
 
 /* ------------------------*/
@@ -713,7 +733,8 @@ img {
   width: 200px;
   margin-bottom: 13px;
 }
-
+/* ------------------------------------------*/
+/* --------О компании-----------------------*/
 .about-glacy {
   width: 1106px;
   background-image: url("../img/pattern.jpg");
@@ -795,7 +816,8 @@ img {
   width: 50px;
   height: 50px;
 }
-
+/*-----------------------------------------------*/
+/*--------Контентные блоки-----------------------*/
 .content {
   margin-bottom: 40px;
 }
@@ -823,20 +845,107 @@ img {
   line-height: 30px;
   color: #323232;
   font-weight: bold;
+
+
+
 }
 
-.mailing {
+.blog a:hover {
+  color: #ed7c70;
+}
+
+
+.mailing-block {
   float: right;
-  width: 510px;
-  height: 185px;
+  width: 560px;
+  height: 220px;
   background-image: url("../img/email-back.jpg");
-  padding-top: 35px;
-  padding-left: 30px;
-  padding-right: 20px;
   border-radius: 16px;
   position: relative;
 }
 
+.content-field {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding-top: 35px;
+  padding-left: 30px;
+  padding-right: 20px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+}
+.content-field p {
+  padding-bottom: 40px;
+}
+
+.email-field {
+	background-color: #ffffff;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #999999;
+	padding: 9px 0 9px 10px;
+	width: 100%;
+	margin-right: 10px;
+	border: none;
+	box-shadow: 0 0 0 1px #d3d3d2;
+}
+.email-block {
+  margin-right: 160px;
+}
+.subscription {
+	position: relative;
+}
+
+.email-field:hover {
+	box-shadow: inset 0 0 0 2px #d3d3d2;
+}
+.email-field:focus {
+	outline: none;
+	box-shadow: inset 0 0 0 2px #8fbdec;
+}
+
+.email-label {
+	display: block;
+	position: absolute;
+	transition: top 0.7s ease, opacity 0.7s ease;
+	opacity: 0;
+	color: #999;
+	font-size: 16px;
+	top: 11px;
+	left: 11px;
+	width: 100%;
+}
+.email-field:valid + .email-label {
+	top: -20px;
+	opacity: 0;
+	font-size: 14px;
+	color: #9a9a9a;
+}
+.email-field:not(:placeholder-shown) + .email-label {
+	top: -20px;
+	opacity: 0;
+	font-size: 14px;
+	color: #9a9a9a;
+}
+.email-field:focus + .email-label {
+	top: -20px;
+	opacity: 1;
+	font-size: 11px;
+	color: #8fbdec;
+	font-weight: 400;
+}
+
+.subscription-button {
+  right: 25px;
+  bottom: 30px;
+}
+
+/*---------------------------------------------*/
+/*-----------БЛОК С КАРТОЙ--------------------*/
 .map {
   width: 1200px;
   height: 430px;
@@ -866,9 +975,10 @@ img {
   margin-bottom: 5px;
 }
 
-.adress-container .btn {
-  width: 230px;
-  right: auto;
+.feedback-button {
+  display: block;
+  position: relative;
+
 }
 
 .adress {
@@ -890,44 +1000,71 @@ img {
   margin-bottom: 5px;
 }
 
+/*---------------------------------------------*/
+/*--------------------ФУТЕР--------------------*/
 .main-footer {
   height: 70px;
   width: 1146px;
   margin: auto;
   margin-top: 35px;
-  outline: 1px solid red;
 }
 
 .footer-social {
   float: left;
-  width: 260px;
   margin-bottom: 26px;
-  margin-right: 100px;
-  outline: 1px solid green;
+  margin-right: 230px;
 }
 
 .social-btn {
   padding-right: 10px;
 }
 
+/*--------------------------------------------*/
+/*------------ПОЛЕЗНЫЕ ССЫЛКИ-----------------*/
 .usefull-links {
     float: left;
-    width: 470px;
     vertical-align: top;
-    outline: 1px solid yellow;
+    min-width: 350px;
+}
+
+.usefull-links .left-block {
+  float: left;
+}
+
+.usefull-links .right-block {
+  float: right;
 }
 
 .link {
-  display: inline-block;
-  width: 200px;
-  vertical-align: top;
   padding-left: 19px;
+  margin-right: 10px;
 }
 
 .link a {
   color: #ffffff;
   font-size: 13px;
   line-height: 18px;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.link:hover a {
+  color: #f0978d;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 0px;
+    background-color: rgba(255,255,255,0.4);
+}
+
+.link:hover a::after {
+    background-color: #f0978d;
 }
 
 .heart {
@@ -945,11 +1082,37 @@ img {
   background: transparent url("../img/heart-icon.svg") no-repeat;
 }
 
+/*---------------------------------------------*/
+/*----------------КОПИРАЙТ---------------------*/
 .footer-copyright {
   float: right;
-  width: 205px;
+  min-width: 205px;
   margin-top: -20px;
-  outline: 1px solid blue;
+}
+
+.footer-copyright a {
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-copyright:hover a {
+  color: #f0978d;
+}
+
+.footer-copyright a::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 0px;
+    background-color: rgba(255,255,255,0.4);
+}
+
+.footer-copyright:hover a::after {
+    background-color: #f0978d;
 }
 
 .footer-copyright p, .footer-copyright a {
