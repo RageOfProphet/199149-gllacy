@@ -23,7 +23,7 @@
             <li class="main-menu-item">
               <a href="#">Каталог</a>
               <ul class="submenu">
-                  <li class="submenu-item"><a href="#">Новинки</a></li>
+                  <li class="submenu-item"><a class="new-arrivals" href="#">Новинки</a></li>
                   <li class="submenu-item"><a href="#">Сливочное</a></li>
                   <li class="submenu-item"><a href="#">Щербеты</a></li>
                   <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
@@ -83,15 +83,15 @@
           <div class="slider">
           	<div class="slide" id="slide-11">
           		<div class="text-slide">Крем-брюле и пломбир с малиновым джемом</div>
-          		<a class="btn button-11" href="#">Давайте оба!</a>
+          		<a class="btn slider-button" href="#">Давайте оба!</a>
           	</div>
           	<div class="slide" id="slide-22">
           	   <div class="text-slide">Шоколадный пломбир и лимонный сорбет</div>
-          	    <a class="btn button-22" href="#">Давайте оба!</a>
+          	    <a class="btn slider-button" href="#">Давайте оба!</a>
           	</div>
-          	<div class="slide" id="slide-33">
+          	<div class="slide" id="slide">
           			<div class="text-slide">Пломбир с помадкой и клубничный щербет</div>
-          			<a class="btn button-33" href="#">Давайте оба!</a>
+          			<a class="btn slider-button" href="#">Давайте оба!</a>
           	</div>
           </div>
         <div class="slider-controls">
@@ -106,12 +106,12 @@
         <div class="raspberries-promo">
           <p class="promo-title"> Малинка даром!</p>
           <p> При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="btn" href="#">Хочу варенье</a>
+          <a class="btn promo-button" href="#">Хочу варенье</a>
         </div>
         <div class="choco-promo">
           <p class="promo-title">Шоколадки даром!</p>
           <p> При покупке 2 кг пломбира добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a class="btn" href="#">Хочу шоколадки</a>
+          <a class="btn promo-button" href="#">Хочу шоколадки</a>
         </div>
       </div>
       <div class="bestsellers">
@@ -169,21 +169,26 @@
         </div>
         <div class="features temp">
           <p>Доставка нашего мороженого до зазказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
-        </div>        
+        </div>
       </div>
       <div class="content clearfix">
           <div class="blog">
             <span class="blog-title"> Новое в нашем блоге</span><br>
             <a href="#">10 способов сервировки<br> фруктовых щербетов<br> к столу</a>
           </div>
-        <div class="mailing">
-          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
-          <form class="mail" action="#" method="post">
-            <label>
-              <input type="text" name="mail-input" value="Электронная почта">
-            </label>
-              <input class="btn" type="submit" value="Отправить">
-          </form>
+        <div class="mailing-block">
+            <div class="content-field">
+            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
+
+            <form class="email-block" action="#" method="post">
+									<div class="subscription">
+										<input id="subscription" class="email-field" type="text" name="email" placeholder="Электронная почта">
+										<label for="subscription" class="email-label">Электронная почта</label>
+									</div>
+                <button class="btn subscription-button" type="submit">Отправить</button>
+            </form>
+
+          </div>
         </div>
       </div>
       <div class="map">
@@ -195,7 +200,7 @@
             <p>Для заказов по телефону:</p>
             <div class="phone-number">8 812 450-25-25 </div>
             <div class="time">(с 10 до 20 ежедневно)</div>
-            <a class="btn" href="#">Форма обратной связи</a>
+            <a class="btn feedback-button" href="#">Форма обратной связи</a>
           </div>
 
       </div>
@@ -207,13 +212,17 @@
         <a class="social-btn social-btn-fb" href="#"><img src="img/fb-social.svg" width="32" height="32" alt="facebook"></a>
         <a class="social-btn social-btn-vk" href="#"><img src="img/vk-social.svg" width="32" height="32" alt="vkontakte"></a>
       </div>
-      <div class="usefull-links">
+      <div class="usefull-links clearfix">
+        <div class="left-block">
           <p class="link heart">
             <a href="#"><b>Для поставщиков</b></a>
           </p>
+          <p class="link"><a href="#">О производстве</a></p>
+        </div>
+        <div class="right-block">
             <p class="link"><a href="#">Наши документы</a></p>
-            <p class="link"><a href="#">О производстве</a></p>
             <p class="link"><a href="#">Экологические стандарты</a></p>
+          </div>
         </div>
       <div class="footer-copyright">
         <img src="img/academy-logo.svg" width="108" height="37" alt="HTML academy">
