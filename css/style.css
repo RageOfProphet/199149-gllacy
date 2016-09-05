@@ -327,7 +327,7 @@ img {
 }
 
 /*ОТОБРАЖЕНИЕ ФОРМЫ ПОИСКА*/
-+++.header-search-block  {
+.button-container:hover .header-search-block  {
   display: block;
 }
 
@@ -396,7 +396,7 @@ img {
 }
 
 /*ОТОБРАЖЕНИЕ ФОРМЫ ЛОГИНА*/
-+++ .header-enter-block  {
+.button-container:hover .header-enter-block  {
   display: block;
 }
 
@@ -483,8 +483,8 @@ img {
 	box-shadow: 0 20px 20px rgba(0,0,0,0.4);
 }
 
-/*ОТОБРАЖЕНИЕ ФОРМЫ ПОИСКА*/
-+++.active-cart:hover .form-basket {
+/*ОТОБРАЖЕНИЕ СОДЕРЖИМОГО КОРЗИНЫ*/
+.button-container:hover .form-basket {
 	display: block;
 }
 table {
