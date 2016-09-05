@@ -9,9 +9,9 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
-    <input class="hide" type="radio" name="ground_color" id="green-1" checked>
-    <input class="hide" type="radio" name="ground_color" id="violet-2">
-    <input class="hide" type="radio" name="ground_color" id="brown-3">
+    <input class="hide" type="radio" name="ground-color" id="green-1" checked>
+    <input class="hide" type="radio" name="ground-color" id="violet-2">
+    <input class="hide" type="radio" name="ground-color" id="brown-3">
     <div class="wrapper">
       <header class="main-header">
         <div class="header-container clearfix">
@@ -21,7 +21,7 @@
           <nav class="main-navigation">
           <ul class="main-menu">
             <li class="main-menu-item">
-              <a href="#">Каталог</a>
+              <a href="catalog.html">Каталог</a>
               <ul class="submenu">
                   <li class="submenu-item"><a class="new-arrivals" href="#">Новинки</a></li>
                   <li class="submenu-item"><a href="#">Сливочное</a></li>
@@ -45,7 +45,7 @@
               <div class="header-search-block">
                 <form class="search-block-form" action="#" method="post">
                   <input id="search-block" type="text" placeholder="Что ищем?">
-                  <label for="search_block"></label>
+                  <label for="search-block"></label>
                 </form>
               </div>
             </div>
@@ -97,9 +97,9 @@
           	</div>
           </div>
         <div class="slider-controls">
-          <label for="green-1" class="slide_label label_green_1"></label>
-          <label for="violet-2" class="slide_label label_violet_2"></label>
-          <label for="brown-3" class="slide_label label_brown_3"></label>
+          <label for="green-1" class="slide-label label-green-1"></label>
+          <label for="violet-2" class="slide-label label-violet-2"></label>
+          <label for="brown-3" class="slide-label label-brown-3"></label>
         </div>
       </div>
 
@@ -234,5 +234,25 @@
       </div>
     </footer>
     </div>
+    <div class="modal-content">
+      	<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      	<form class="feedback-form" action="#canvas" method="post">
+      		<h3 class="modal-content-title">Мы обязательно вам ответим!</h3>
+      		<div class="control">
+      			<input id="modal-name" type="text" name="name" placeholder="Как вас зовут?">
+      			<label for="modal-name">Как вас зовут?</label>
+      		</div>
+      		<div class="control">
+      			<input id="modal-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+      			<label for="modal-email">Ваша почта для ответа?</label>
+      		</div>
+      		<div class="control">
+      			<textarea id="modal-text" name="text" cols="30" rows="5" placeholder="Напишите что нибудь..."></textarea>
+      			<label for="modal-text">Напишите что-нибуть...</label>
+      		</div>
+      		<input class="btn" type="submit" value="Отправить">
+      	</form>
+      </div>
+      <div class="modal-shadow"></div>
     </body>
 </html>
