@@ -108,7 +108,7 @@ button:focus, input:focus  {
   padding: 0 27px;
 }
 
-/* --------------------------------------------*/
+/* ------------------------------------------*/
 /* ----------------ГЛАВНОЕ МЕНЮ----------------*/
 
 .page-logo {
@@ -266,13 +266,12 @@ button:focus, input:focus  {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  padding-bottom: 10px;
+  padding-bottom: 13px;
 
 }
 
 .btn-head {
   padding: 16px 16px;
-  vertical-align: top;
   cursor: pointer;
   text-decoration: none;
   font-size: 14px;
@@ -286,8 +285,10 @@ button:focus, input:focus  {
 }
 
 .search {
-  font-size: 0px;
   border-radius: 50%;
+  padding: 0 16px;
+  padding-top: 6px;
+  padding-bottom: 8px;
 }
 
 .search::after {
@@ -302,7 +303,7 @@ button:focus, input:focus  {
 
 .header-search-block {
   position: absolute;
-  top: 27px;
+  top: 30px;
   right: 0px;
   display: none;
   border-radius: 5px;
@@ -357,7 +358,7 @@ button:focus, input:focus  {
 
 .header-enter-block {
   position: absolute;
-  top: 27px;
+  top: 30px;
   right: 0px;
   display: none;
   border-radius: 5px;
@@ -1137,15 +1138,25 @@ h1 {
   background: transparent url("../img/Hit-icon.png") no-repeat;
 }
 
-.price {
-  font-size: 44px;
-  line-height: 44px;
-  color: white;
-  font-weight: bold;
+.price-block {
   position: absolute;
   top: 210px;
   left: 10px;
-  text-shadow: 0 2px 5px black;
+  text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.price {
+  font-size: 45px;
+  line-height: 45px;
+  color: white;
+  font-weight: bold;
+}
+
+.weight {
+  font-size: 30px;
+  line-height: 45px;
+  color: white;
+  font-weight: bold;
 }
 
 .product-img-crop::before {
@@ -1469,6 +1480,11 @@ h1 {
   background-image: url("../img/map.jpg");
   margin-left: -27px;
   position: relative;
+}
+
+iframe {
+  width: 1200px;
+  height: 430px;
 }
 
 .adress-container {
