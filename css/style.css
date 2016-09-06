@@ -229,7 +229,7 @@ img {
 .submenu .new-arrivals::after {
     content: "";
     position: absolute;
-    height: 1px;
+    height: 2px;
     left: 10px;
     right: 10px;
     bottom: 0px;
@@ -253,6 +253,7 @@ img {
 .button-container {
   position: relative;
   display: inline-block;
+  vertical-align: top;
   padding-bottom: 10px;
 
 }
@@ -356,7 +357,7 @@ img {
 .enter-block-form {
   display: block;
   width: 240px;
-  height: 196px;
+  height: 180px;
   margin: 20px 15px;
   font-size: 14px;
   position: relative;
@@ -376,6 +377,7 @@ img {
 }
 
 .enter-button {
+  padding: 12px 25px;
   width: 100px;
   right: auto;
 }
@@ -560,6 +562,7 @@ table {
 }
 .order .btn-order {
   display: inline-block;
+  vertical-align: top;
 	position: relative;
 	padding: 12px 15px;
 	font-size: 18px;
@@ -921,8 +924,8 @@ h1 {
 	border-radius: 50%;
 }
 .block-fatness label:hover::before {
-	border: 2px solid #f8f7f4;
-	border-radius: 50%;
+	box-shadow: 0 0 0 1px #f8f7f4;
+
 }
 /* -------------------------------------------*/
 /* --------------НАПОЛНИТЕЛИ-----------------*/
@@ -954,20 +957,24 @@ h1 {
 }
 .block-filler label::before {
 	content: "";
-	display: block;
+	display: block-inline;
 	position: absolute;
 	width: 20px;
 	height: 20px;
-	top: 0;
+	top: -1px;
 	left: 0;
 	border: 1px solid #f8f7f4;
 	border-radius: 5px;
-
 }
+.block-filler label:hover::before {
+	box-shadow: 0px 0px 0px 2px #f8f7f4;
+	border-radius: 5px;
+}
+
 .container-filler input[type="checkbox"]:checked + label::after {
 	content: "";
 	position: absolute;
-	top: 5px;
+	top: 3px;
 	left: 5px;
 	width: 11px;
 	height: 7px;
@@ -975,11 +982,7 @@ h1 {
 	border-bottom: 2px solid #f8f7f4;
 	transform: rotate(-45deg);
 }
-.block-filler label:hover::before {
 
-	border: 2px solid #f8f7f4;
-	border-radius: 5px;
-}
 /* ------------------------------------------*/
 /* -------------КНОПКА ФОРМЫ-----------------*/
 .button {
@@ -1161,6 +1164,7 @@ h1 {
 .product-item:hover .product-img-crop::before, .product-item:hover .glance-look{
   display: inline-block;
   z-index: 10;
+  vertical-align: top;
 }
 /* ------------------------------------------*/
 /* ----------------КАТАЛОГ-------------------*/
@@ -1601,6 +1605,7 @@ h1 {
   text-decoration: none;
   position: relative;
   display: inline-block;
+  vertical-align: top;
 }
 
 .link:hover a {
@@ -1654,6 +1659,7 @@ h1 {
   text-decoration: none;
   position: relative;
   display: inline-block;
+  vertical-align: top;
 }
 
 .footer-copyright:hover a {

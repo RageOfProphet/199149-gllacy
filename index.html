@@ -26,7 +26,7 @@
                   <li class="submenu-item"><a class="new-arrivals" href="#">Новинки</a></li>
                   <li class="submenu-item"><a href="#">Сливочное</a></li>
                   <li class="submenu-item"><a href="#">Щербеты</a></li>
-                  <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
+                  <li class="submenu-item"><a  href="#">Фруктовый лед</a></li>
                   <li class="submenu-item"><a href="#">Мелорин</a></li>
               </ul>
             </li>
@@ -239,15 +239,15 @@
       	<form class="feedback-form" action="#canvas" method="post">
       		<h3 class="modal-content-title">Мы обязательно вам ответим!</h3>
       		<div class="control">
-      			<input id="modal-name" type="text" name="name" placeholder="Как вас зовут?">
+      			<input id="modal-name" type="text" name="name" placeholder="Как вас зовут?" required>
       			<label for="modal-name">Как вас зовут?</label>
       		</div>
       		<div class="control">
-      			<input id="modal-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+      			<input id="modal-email" type="email" name="email" placeholder="Ваша почта для ответа?" required>
       			<label for="modal-email">Ваша почта для ответа?</label>
       		</div>
       		<div class="control">
-      			<textarea id="modal-text" name="text" cols="30" rows="5" placeholder="Напишите что нибудь..."></textarea>
+      			<textarea id="modal-text" name="text" cols="30" rows="5" placeholder="Напишите что нибудь..." required></textarea>
       			<label for="modal-text">Напишите что-нибуть...</label>
       		</div>
       		<input class="btn" type="submit" value="Отправить">
@@ -256,3 +256,32 @@
       <div class="modal-shadow"></div>
     </body>
 </html>
+<script>
+  var link = document.querySelector(".feedback-button");
+  var popup = document.querySelector(".modal-content");
+  var shadow = document.querySelector(".modal-shadow");
+  var close = document.querySelector(".modal-content-close");
+
+  var form = popup.querySelector("form");
+  var login = popup.querySelector("[name=login]");
+  var mail = popup.querySelector("[name=email]");
+
+  link.addEventListener("click", function(event){
+    event.preventDefault();
+    popup.classList.add("modal-content-show");
+    shadow.classList.add('modal-show');
+    });
+
+  close.addEventListener("click", function(event){
+    event.preventDefault();
+    popup.classList.remove("modal-content-show");
+    shadow.classList.remove('modal-show');
+    });
+
+  form.addEventListener("submit", function(event){
+    if (!login.value || !mail.value){
+    event.preventDefault();
+    console.log("Нужно ввести данные");
+      }
+    });
+</script>
