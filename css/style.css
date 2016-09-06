@@ -37,6 +37,12 @@ img {
   clear: both;
 }
 
+/*----------WEBKIT BUG--------*/
+button:focus, input:focus  {
+  outline: none;
+}
+
+
 .btn {
   display: block;
   padding: 10px 20px;
@@ -1022,10 +1028,6 @@ h1 {
 	box-shadow: inset 0 2px 2px 1px #696969;
 }
 
-/*----------WEBKIT BUG--------*/
-.button .use-button:focus {
-  outline: none;
-}
 
 /* -----------------------------------------*/
 /* ----------Блок с акциями-----------------*/
