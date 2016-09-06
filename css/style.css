@@ -159,6 +159,12 @@ img {
   border-radius: 25px;
 }
 
+.main-menu-item:active > a {
+  box-shadow:
+  inset 0 1px 2px 1px #696969;
+}
+
+
 /*-------------------------------------------------------*/
 /*----------ВЫБРАННЫЙ ПУНКТ ГЛАВНОГО МЕНЮ----------------*/
 .main-menu-item .current {
@@ -1082,8 +1088,8 @@ h1 {
 
 .product-item {
   display: inline-block;
-  width: 23.4%;
-  margin-right: 18px;
+  width: 23.5%;
+  margin-right: 17px;
   vertical-align: top;
   position: relative;
   text-align: center;
@@ -1501,7 +1507,7 @@ h1 {
   font-size: 14px;
   line-height: 22px;
   font-weight: normal;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 /*---------------------------------------------------------*/
@@ -1571,7 +1577,7 @@ h1 {
 .social-btn:active {
 	opacity: 0.8;
 	box-shadow:
-    inset 0 2px 2px 1px #888888,
+    inset 0 1px 0px 2px #545454,
 		0 0 0 4px rgba(255,255,255,0.7);
 }
 
