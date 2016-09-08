@@ -1,14 +1,10 @@
 html,
 body {
-  background-color: #849d8f;
-  min-width: 1200px;
-  margin: 0;
-  padding: 0;
-
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
+  background-color: #849d8f;
 }
 
 h1 {
@@ -37,15 +33,21 @@ img {
   clear: both;
 }
 
+.site-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
 /*----------WEBKIT BUG--------*/
 button:focus, input:focus  {
   outline: none;
 }
 
-
 .btn {
   display: block;
   padding: 10px 20px;
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   position: absolute;
   cursor: pointer;
@@ -63,11 +65,13 @@ button:focus, input:focus  {
 }
 
 .btn:hover {
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .btn:active {
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0px 1px 2px rgba(172, 16, 0, 1);
 }
@@ -75,12 +79,10 @@ button:focus, input:focus  {
   display: none;
 }
 .wrapper {
-  background-repeat: no-repeat;
   background-position: top center;
-  transition:
-      background-image 0.5s ease,
-      background-color 0.5s ease;
+  background-repeat: no-repeat;
 }
+
 .wrapper::before,
 .wrapper::after {
 	content: "";
@@ -97,14 +99,15 @@ button:focus, input:focus  {
 }
 
 .header-container {
-  max-width: 1180px;
-  margin: 0 auto;
+  max-width: 1153px;
+  margin: 0 0;
   padding-left: 20px;
+  padding-right: 27px;
 }
 
 .container {
-  width: 1146px;
-  margin: 0 auto;
+  max-width: 1146px;
+  margin: 0;
   padding: 0 27px;
 }
 
@@ -122,7 +125,8 @@ button:focus, input:focus  {
 
 .main-navigation {
   float: left;
-  width: 700px;
+  max-width: 700px;
+  min-width: 380px;
 }
 
 .main-menu {
@@ -248,14 +252,12 @@ button:focus, input:focus  {
     background-color: #d1d0ce;
 }
 
-
 /* ---------------------------------------------*/
 /* ---------МЕНЮ ПОЛЬЗОВАТЕЛЯ СПРАВА------------*/
 .user-block {
   float: right;
   min-width: 260px;
   padding-top: 23px;
-  margin-right: 27px;
 }
 
 .user-buttons {
@@ -558,10 +560,12 @@ table {
 	border-radius: 1px;
 }
 .close-basket::before {
-	  transform: rotate(45deg);
+	  -webkit-transform: rotate(45deg);
+	          transform: rotate(45deg);
 }
 .close-basket::after {
-	  transform: rotate(-45deg);
+	  -webkit-transform: rotate(-45deg);
+	          transform: rotate(-45deg);
 }
 .total-trice {
 	margin-top: 10px;
@@ -652,6 +656,10 @@ table {
 	background-color: rgba(255,255,255,0.4);
 }
 
+.slider-controls label:active {
+	background-color: rgba(255,255,255,1);
+}
+
 #green-1:checked ~ .wrapper #slide-1,
 #violet-2:checked ~ .wrapper #slide-2,
 #brown-3:checked ~ .wrapper #slide-3 {
@@ -661,14 +669,17 @@ table {
 	background-color: #849d8f;
 	background-image: url("../img/slider-1.png");
 }
+
 #violet-2:checked ~ .wrapper {
 	background-color: #8996a6;
 	background-image: url("../img/slider-2.png");
 }
+
 #brown-3:checked ~ .wrapper {
 	background-color: #9d8b84;
 	background-image: url("../img/slider-3.png");
 }
+
 #green-1:checked ~ .wrapper label[for="green-1"],
 #violet-2:checked ~ .wrapper label[for="violet-2"],
 #brown-3:checked ~ .wrapper label[for="brown-3"] {
@@ -731,7 +742,8 @@ table {
 	position: absolute;
 	top: 1px;
 	right: 3px;
-	transform: scale(0.5, 1);
+	-webkit-transform: scale(0.5, 1);
+	        transform: scale(0.5, 1);
   color: #ffffff;
 }
 
@@ -804,7 +816,9 @@ h1 {
 	text-overflow: '';
 	background-color: rgba(248,247,244,0.2);
 	border: none;
-	appearance: none;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
 
 }
 .quicksort-options:hover {
@@ -993,7 +1007,8 @@ h1 {
 	height: 7px;
 	border-left: 2px solid #f8f7f4;
 	border-bottom: 2px solid #f8f7f4;
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 
 /* ------------------------------------------*/
@@ -1043,12 +1058,11 @@ h1 {
   background-image: url("../img/raspberry-background.jpg");
   border-radius: 16px;
   overflow: hidden;
-
+  background-color: #a90f32;
   margin-right: 26px;
   padding-left: 20px;
   padding-top: 17px;
   padding-right: 20px;
-
   color: white;
   font-size: 18px;
   line-height: 22px;
@@ -1062,12 +1076,11 @@ h1 {
   height: 212px;
   background-image: url("../img/choco-background.jpg");
   border-radius: 16px;
-
+  background-color: #4b2911;
   color: white;
   padding-left: 20px;
   padding-top: 17px;
   padding-right: 20px;
-
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
@@ -1143,6 +1156,8 @@ h1 {
   top: 210px;
   left: 10px;
   text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
+  cursor: pointer;
+  z-index: 10;
 }
 
 .price {
@@ -1237,7 +1252,8 @@ h1 {
 .pagination .prev {
 	background: transparent url("../img/arrow-right.svg") no-repeat;
   background-position: 15px 9px;
-  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .pagination .next {
@@ -1250,7 +1266,10 @@ h1 {
 	background-color: #ffffff;
 	color: #353535;
 	pointer-events: none;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 
 .disabled {
@@ -1264,6 +1283,7 @@ h1 {
 .about-glacy {
   width: 1106px;
   background-image: url("../img/pattern.jpg");
+  background-color: #ede2ca;
   margin-bottom: 40px;
   padding-left: 20px;
   padding-right: 20px;
@@ -1354,6 +1374,7 @@ h1 {
   width: 540px;
   height: 194px;
   background-image: url("../img/News-back.jpg");
+  background-color: #ffffff;
   margin-right: 26px;
   padding-top: 25px;
   padding-left: 20px;
@@ -1386,6 +1407,7 @@ h1 {
   width: 560px;
   height: 220px;
   background-image: url("../img/email-back.jpg");
+  background-color: #f8f7f4;
   border-radius: 16px;
   position: relative;
 }
@@ -1437,6 +1459,7 @@ h1 {
 .email-label {
 	display: block;
 	position: absolute;
+	-webkit-transition: top 0.7s ease, opacity 0.7s ease;
 	transition: top 0.7s ease, opacity 0.7s ease;
 	opacity: 0;
 	color: #999;
@@ -1475,16 +1498,18 @@ h1 {
 /*----------------------БЛОК С КАРТОЙ--------------------*/
 /*-------------------------------------------------------*/
 .map {
-  width: 1200px;
+  max-width: 1200px;
   height: 430px;
-  background-image: url("../img/map.jpg");
-  margin-left: -27px;
   position: relative;
+  background-image: url("../img/map.jpg");
+  margin: 0 auto;
+  background-color: #ede6c9;
 }
 
 iframe {
   width: 1200px;
   height: 430px;
+
 }
 
 .adress-container {
@@ -1552,8 +1577,8 @@ iframe {
 }
 .social-btn {
 	display: inline-block;
-	width: 32px;
-	height: 32px;
+	width: 31px;
+	height: 31px;
 	opacity: 0.5;
 	margin-right: 17px;
 	border-radius: 50%;
@@ -1721,6 +1746,34 @@ iframe {
 /*---------------------------------------------------------*/
 /*-------------------МОДАЛЬНОЕ ОКНО------------------------*/
 /*---------------------------------------------------------*/
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
 .modal-content {
 	position: fixed;
 	top: 50%;
@@ -1760,11 +1813,13 @@ iframe {
 	border-radius: 1px;
 }
 .modal-content-close::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .modal-content-close::after {
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 .modal-content h3 {
 	margin: 0;
@@ -1819,6 +1874,7 @@ iframe {
 	position: absolute;
 	top: -10px;
 	left: 16px;
+	-webkit-transition: top .7s ease,opacity .7s ease;
 	transition:top .7s ease,opacity .7s ease;
 	opacity: 0;
 	font-size: 13px;
@@ -1872,4 +1928,20 @@ iframe {
 
 .modal-content-show {
 	display:block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.8s;
+}
+/*-----------------------ВЕРТИКАЛЬНАЯ ПОЛОСА ПРОКРУТКИ-------------------------*/
+@media (max-width: 1224px) {
+.container {
+padding: 0 10px;
+}
+.map {
+width: 100%;
+margin: 0;
+overflow: hidden;
+}
 }
